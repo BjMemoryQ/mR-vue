@@ -1,8 +1,11 @@
+import Vue from 'vue'
+import App from './App.vue'
+import router from './routers'
+import store from './stores'
 import '@babel/polyfill'
 
-const arr = [new Promise(() => {}), new Promise(() => {})]
-
-arr.map((item) => {
-  console.log(item)
-  return true
-})
+new Vue({
+  router,
+  store,
+  render: (h) => h(App)
+}).$mount('#app')

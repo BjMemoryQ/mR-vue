@@ -24,5 +24,11 @@ module.exports = {
     'semi': 0,
     // 允许使用console
     "no-console": 0,
+    // 不用必须把依赖引入到dependencies
+    "import/no-extraneous-dependencies": ["error", {
+      "devDependencies": true
+    }],
+    // 对象数组键值对最后一个逗号不要
+    "comma-dangle": [2, "never"]
   }
 }

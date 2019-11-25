@@ -1,6 +1,6 @@
 {
   "files.autoSave": "onFocusChange",
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 0,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "editor.tabSize": 2,
   "editor.detectIndentation": false,
