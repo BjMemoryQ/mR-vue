@@ -1,0 +1,73 @@
+{
+  "files.autoSave": "onFocusChange",
+  "window.zoomLevel": 1,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "vetur.format.defaultFormatter.html": "js-beautify-html",
+  /* "prettier.eslintIntegration": false,
+"prettier.stylelintIntegration": false, */
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "markdown.preview.fontSize": 12,
+  "workbench.iconTheme": "vscode-icons",
+  "typescript.suggestionActions.enabled": false,
+  "emmet.syntaxProfiles": {
+    "javascript": "jsx",
+    "vue-html": "html",
+    "typescript": "html"
+  },
+  /* "emmet.includeLanguages": {
+"vue-html": "html",
+"javascript": "javascriptreact"
+} */
+  "vetur.format.defaultFormatterOptions": {
+    "js-beautify-html": {
+      "wrap_attributes": "force",
+      "tabSize": 2
+    },
+    "prettyhtml": {
+      "printWidth": 100,
+      "singleQuote": false
+    }
+  },
+  "vetur.validation.template": false,
+  "vetur.format.defaultFormatter.js": "vscode-typescript",
+  // 定义函数参数括号前的空格处理方式。
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+  "stylusSupremacy.insertColons": false, // 是否插入冒号
+  "stylusSupremacy.insertSemicolons": false, // 是否插入分好
+  "stylusSupremacy.insertBraces": false, // 是否插入大括号
+  "stylusSupremacy.insertNewLineAroundBlocks": false,
+  "sublimeTextKeymap.promptV3Features": true,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.snippetSuggestions": "top",
+  "editor.formatOnPaste": true, // 两个选择器中是否换行
+  "eslint.enable": true,
+  "eslint.autoFixOnSave": true, //eslint.autoFixOnSave - 启用保存时自动修复。请注意，自动修复的保存仅当VS代码的files.autoSave要么是off，onFocusChange或onWindowChange。它无法使用afterDelay。
+  "eslint.alwaysShowStatus": true,
+  // "eslint.nodePath": "c:\\Users\\suninfo\\Desktop\\project\\Q1web项目\\suninfo-web\\node_modules",//这个会防止项目打开其他项目文件时路径改变，导致eslint不会出现提示，最好将此设置为工作区中
+  "eslint.run": "onType",
+  "eslint.validate": [
+    {
+      "language": "javascript",
+      "autoFix": true
+    },
+    "javascriptreact",
+    "jsx",
+    {
+      "language": "html",
+      "autoFix": true
+    },
+    {
+      "language": "vue",
+      "autoFix": true //这句是vue保存时修复的关键
+    }
+  ], //将>多行JSX元素放在最后一行的末尾，而不是单独放在下一行
+  "eslint.options": {
+    "extensions": [
+      ".js",
+      ".vue"
+    ]
+  }
+}
