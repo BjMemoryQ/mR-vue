@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HomePage from '../views/home.vue'
+import HomePage from '../views/home/Home.vue'
 import Login from '../views/login/Login.vue'
 import Register from '../views/register/Register.vue'
 

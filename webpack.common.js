@@ -59,7 +59,6 @@ module.exports = {
     new VueLoaderPlugin()
   ],
   output: {
-    publicPath: './',
     filename: 'dist.js', // 输出的打包文件
     path: path.resolve(__dirname, 'dist') // 打包文件夹
   }
