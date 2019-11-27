@@ -2,6 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const {
   CleanWebpackPlugin
 } = require('clean-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const path = require('path')
 
@@ -27,6 +28,9 @@ module.exports = {
       test: /\.scss$/,
       use: ['style-loader', 'css-loader', 'sass-loader']
     }, {
+      test: /\.css$/,
+      use: ['style-loader', 'css-loader', 'sass-loader']
+    }, {
       test: /\.js$/,
       exclude: /node_modules/,
       loader: 'babel-loader',
@@ -45,6 +49,13 @@ module.exports = {
       template: './public/index.html'
     }),
     new CleanWebpackPlugin(),
+    new CopyWebpackPlugin([{
+      from: path.join(`${__dirname}/public/favicon.ico`),
+      to: path.join(`${__dirname}/dist/favicon.ico`)
+    }, {
+      from: path.join(`${__dirname}/public/base.css`),
+      to: path.join(`${__dirname}/dist/base.css`)
+    }]),
     new VueLoaderPlugin()
   ],
   output: {

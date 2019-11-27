@@ -29,6 +29,8 @@ module.exports = {
       "devDependencies": true
     }],
     // 对象数组键值对最后一个逗号不要
-    "comma-dangle": [2, "never"]
+    "comma-dangle": [2, "never"],
+    // 解决全局require()报错
+    "global-require": 0
   }
 }
