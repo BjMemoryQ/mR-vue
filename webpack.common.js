@@ -15,13 +15,13 @@ module.exports = {
         loader: 'vue-loader'
       }
     }, {
-      test: /\.png|jpg|gif$/,
+      test: /\.png|jpg|gif|jpeg$/,
       use: {
         loader: 'url-loader',
         options: {
           name: '[name].[ext]', // placeholder  修改文件名称
           outputPath: 'images/',
-          limit: 204800
+          limit: 2000 // 图片大小超出这个limit 才会被打包
         }
       }
     }, {
@@ -59,6 +59,7 @@ module.exports = {
     new VueLoaderPlugin()
   ],
   output: {
+    publicPath: './',
     filename: 'dist.js', // 输出的打包文件
     path: path.resolve(__dirname, 'dist') // 打包文件夹
   }
