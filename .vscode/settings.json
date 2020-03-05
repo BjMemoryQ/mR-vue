@@ -1,6 +1,6 @@
 {
   "files.autoSave": "onFocusChange",
-  "window.zoomLevel": 0,
+  "window.zoomLevel": 1,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "editor.tabSize": 2,
   "editor.detectIndentation": false,
@@ -69,5 +69,8 @@
       ".js",
       ".vue"
     ]
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
   }
 }

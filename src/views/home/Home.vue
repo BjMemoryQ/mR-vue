@@ -1,12 +1,14 @@
 <template>
- <swiper class='swiper-wrap'
+  <div>
+    <!-- <swiper class='swiper-wrap'
     ref="mySwiper"
     :options="swiperOption"
     v-if="commodity.length!=0">
     <swiper-slide v-for="(item, index) in commodity"
       data-index="index"
       :key="index">
-      <img class="item" :src='item.url' />
+      <img class="item"
+        :src='item.url' />
     </swiper-slide>
     <div class="swiper-pagination"
       slot="pagination"></div>
@@ -14,32 +16,9 @@
       slot="button-prev"></div>
     <div class="swiper-button-next"
       slot="button-next"></div>
-  </swiper>
-</template>
-<script>
-export default {
-  name: 'home'
-}
-</script>
-<style lang='stylus' scoped>
-</style>
-<template>
-  <swiper class='swiper-wrap'
-    ref="mySwiper"
-    :options="swiperOption"
-    v-if="commodity.length!=0">
-    <swiper-slide v-for="(item, index) in commodity"
-      data-index="index"
-      :key="index">
-      <img class="item" :src='item.url' />
-    </swiper-slide>
-    <div class="swiper-pagination"
-      slot="pagination"></div>
-    <div class="swiper-button-prev"
-      slot="button-prev"></div>
-    <div class="swiper-button-next"
-      slot="button-next"></div>
-  </swiper>
+  </swiper> -->
+    <div @click="goDetail"></div>
+  </div>
 </template>
 <script>
 export default {
@@ -69,12 +48,19 @@ export default {
     }
   },
   computed: {
-    swiper() {
-      return this.$refs.mySwiper.swiper
-    }
+    // swiper() {
+    //   return this.$refs.mySwiper.swiper
+    // }
   },
   mounted() {
-    this.swiper.slideTo(3, 1000, false)
+    console.log('this', this.$decorator);
+    console.log('this', this.$decorator.isTestable);
+    // this.swiper.slideTo(3, 1000, false)
+  },
+  methods: {
+    goDetail() {
+
+    }
   }
 }
 </script>
