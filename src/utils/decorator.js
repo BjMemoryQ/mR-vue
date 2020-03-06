@@ -1,5 +1,6 @@
 function testable(target) {
-  target.prototype.isTestable = true
+  const oldTarget = target
+  oldTarget.prototype.isTestable = true
 }
 
 @testable
